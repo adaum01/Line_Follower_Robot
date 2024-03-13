@@ -1,0 +1,80 @@
+//------------------------------------------------------------------------------
+//
+//  Description: This is the header file macros.h, contains  definitions
+//  Needs to be included in main.c, clocks.c, init.c, ports.c led.c (add as needed)
+//
+//  Alex Daum
+//  September 14 2022
+//  Built with IAR Embedded Workbench Version: (7.21.1)
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+//Taken from main.c
+#define ALWAYS                  (1)
+#define RESET_STATE             (0)
+#define RED_LED              (0x01) // RED LED 0
+#define GRN_LED              (0x40) // GREEN LED 1
+#define TEST_PROBE           (0x01) // 0 TEST PROBE
+#define TRUE                 (0x01) //
+#define TEST_PROBE           (0x01) // 3.0 TEST PROBE
+#define RED_LED              (0x01) // 1.0 RED LED 0
+#define GRN_LED              (0x40) // 6.6 GREEN LED
+
+// CLOCKS
+#define MCLK_FREQ_MHZ           (8) // MCLK = 8MHz
+#define CLEAR_REGISTER     (0X0000)
+
+// TIMER DEFINITIONS ===========================================================
+#define TB0CCR0_INTERVAL   (50000)   // 8,000,000 / 4 / 8 / (1 / 200msec)
+#define TB0CCR1_INTERVAL   (25000)   // 8,000,000 / 4 / 8 / (1 / 100msec)
+#define TB0CCR2_INTERVAL   (50000)   // 8,000,000 / 4 / 8 / (1 / 200msec)
+
+#define TB1CCR0_INTERVAL   (12500)   // 8,000,000 / 4 / 8 / (1 / 50msec)
+#define TB1CCR1_INTERVAL   (50000)   // 8,000,000 / 4 / 8 / (1 / 200msec)
+#define TB1CCR2_INTERVAL   (50000)   // 8,000,000 / 4 / 8 / (1 / 200msec)
+
+#define TB2CCR0_INTERVAL   (50000)   // 8,000,000 / 4 / 8 / (1 / 200msec)
+#define TB2CCR1_INTERVAL   (12500)   // 8,000,000 / 4 / 8 / (1 / 50msec)
+#define TB2CCR2_INTERVAL   (50000)   // 8,000,000 / 4 / 8 / (1 / 200msec)
+
+#define TB3CCR0_INTERVAL   (50000)   // 8,000,000 / 4 / 8 / (1 / 200msec)
+#define TB3CCR1_INTERVAL   (12500)   // 8,000,000 / 4 / 8 / (1 / 50msec)
+#define TB3CCR2_INTERVAL   (50000)   // 8,000,000 / 4 / 8 / (1 / 200msec)
+
+#define SW_TIMER_INTERRUPT      (5)
+#define SEC_TIMER_INTERRUPT    (10)
+#define ON                    ('1')
+#define OFF                   ('0')
+
+// PWM DEFINITIONS =============================================================
+#define RIGHT_FORWARD_SPEED (TB3CCR1)
+#define RIGHT_REVERSE_SPEED (TB3CCR2)
+#define LEFT_FORWARD_SPEED  (TB3CCR3)
+#define LEFT_REVERSE_SPEED  (TB3CCR4)
+
+#define WHEEL_OFF               (0)
+#define RIGHT_FORWARD        (7500)     //was 10000
+#define LEFT_FORWARD         (7500)     //was 10000
+#define WHEEL_PERIOD        (40000)
+
+#define RIGHT_ALIGN          (5000)
+#define LEFT_ALIGN           (5000)
+
+// MOVEMENT STATES =============================================================
+#define IDLE                    ('I')
+#define RUN                     ('R')
+#define DETECTED                ('D')
+#define DETECTED_DELAY          ('W')
+#define ALIGN                   ('A')
+
+// DETECTOR VALUES =============================================================
+#define DETECT_THRESHOLD        (700)
+
+// SERIAL DEFINITIONS ==========================================================
+#define BEGINNING                 (0)
+#define SMALL_RING_SIZE          (16)
+
+#define BAUD_115200             ('A')
+#define BAUD_460800             ('B')
+
+// INIT STATES =================================================================
